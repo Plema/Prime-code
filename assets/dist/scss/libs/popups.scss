@@ -1,0 +1,753 @@
+.modall {
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 99999;
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    display: none;
+    overflow-y: auto;
+    max-height: 100vh;
+    overflow-x: hidden;
+    top: 0;
+
+    .modall-body {
+        max-width: 320px;
+        background-color: #dae5ee;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        margin: 0 auto;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .close {
+        top: 33px;
+        right: 11px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 5;
+
+        &::before,
+        &::after {
+            content: "";
+            top: 6px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            background: $color_grey;
+        }
+
+        &::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+    }
+
+    .form {
+        height: 100%;
+        background-color: #fff;
+        width: 100%;
+        padding: 16px 12px;
+        overflow: auto;
+    }
+
+}
+
+.modall-card {
+    .modall-body {
+        overflow: auto;
+        height: 100%;
+
+        .close {
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 36px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: absolute;
+            z-index: 5;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            color: $color_green;
+
+            &::before,
+            &::after {
+                content: "";
+                top: 0;
+                left: 88%;
+                width: 30px;
+                height: 2px;
+                position: absolute;
+                background: $color_green;
+            }
+        }
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        span {
+            font-family: "Gotham Pro";
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 35px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-family: "Gotham Pro";
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+
+        .action {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+
+            .btn {
+                min-width: 284px;
+            }
+        }
+
+        .content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .section-content {
+            background-color: #fff;
+            margin: 287px 18px 0;
+            padding: 10px 10px 40px;
+            max-width: 100%;
+        }
+
+        img {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .item-details {
+            margin: 0 auto;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+}
+
+.modall-reply {
+    background-color: rgba(216, 228, 237, 0.9);
+
+    .modall-body {
+        background-color: #fff;
+        width: 290px;
+        height: 339px;
+        text-align: center;
+        padding: 37px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 262px;
+            height: 93px;
+            top: 0;
+            left: 0;
+            background-image: url(../img/popup.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .close {
+            top: 10px;
+            right: 10px;
+            width: 11px;
+            height: 30px;
+
+            &::before,
+            &::after {
+                top: 6px;
+                left: 0;
+                width: 19px;
+            }
+        }
+
+        .content {
+            padding-top: 95px;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            margin-top: 0;
+            line-height: 31px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 0;
+        }
+    }
+
+}
+
+.modall-request {
+    background-color: rgba(216, 228, 237, 0.9);
+
+    .modall-body {
+        height: auto;
+        width: 91%;
+        max-width: 290px;
+        overflow-y: auto;
+        margin-top: 15px;
+
+        img {
+            width: 260px;
+            height: 299px;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            margin-bottom: 27px;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 39.79px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            min-width: 266px;
+        }
+
+        .close {
+            top: 10px;
+            right: 4px;
+            width: 19px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            z-index: 5;
+
+            &::before,
+            &::after {
+                content: "";
+                top: 6px;
+                left: 0;
+                width: 20px;
+                height: 2px;
+            }
+
+        }
+    }
+}
+
+
+.modall.active-modall {
+    display: block;
+}
+
+.showing-modal {
+    overflow: hidden;
+}
+
+.dark {
+    .modall {
+        .modall-body {
+            background-color: #282828;
+
+            h2 {
+                color: $color_black;
+            }
+
+            p {
+                color: $color_black;
+            }
+
+            .form {
+                background-color: #282828;
+            }
+
+            .close::before,
+            .close::after {
+                background: $color_white;
+            }
+
+            h4 {
+                color: $color_white;
+            }
+
+            input {
+                border-bottom: 1px solid $color_white;
+                color: $color_white;
+                background-color: inherit;
+                &:active,&:focus{
+                    border-bottom: 1px solid $color_green;
+                }
+            }
+
+            .eror {
+                &.active {
+                  opacity: 1;
+                }
+              
+                &.active+input {
+                  border-bottom: 1px solid #cc2128;
+                }
+              
+              }
+        }
+    }
+
+    .modall-request,
+    .modall-reply {
+        background-color: rgba(52, 52, 52, 0.9);
+
+        .modall-body p {
+            color: $color_white;
+        }
+    }
+
+    .modall-card {
+        background-color: rgba(52, 52, 52, 0.9);
+    }
+
+}
+
+
+
+@media screen and (max-height: 600px) {
+    .modall {
+        .modall-body {
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+        }
+    }
+
+
+    .modall-request {
+        .modall-body {
+            height: 100%;
+            width: 91%;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .modall {
+        .modall-body {
+            max-width: 530px;
+        }
+
+        .close {
+            top: 30px;
+            right: 18px;
+        }
+
+    }
+
+    .modall-reply {
+        .modall-body {
+            background-color: #fff;
+            width: 630px;
+            height: 497px;
+            max-width: none;
+
+            &::before {
+                width: 551px;
+                height: 237px;
+            }
+
+            .close {
+                top: 28px;
+                right: 49px;
+                width: 11px;
+                height: 30px;
+
+                &::before,
+                &::after {
+                    top: 6px;
+                    left: 0;
+                    width: 29px;
+                }
+            }
+
+            .content {
+                padding-top: 127px;
+            }
+
+            h4 {
+                font-size: 30px;
+                font-weight: 900;
+                margin-bottom: 15px;
+                margin-top: 40px;
+                line-height: 31px;
+            }
+
+            p {
+                font-size: 24px;
+                max-width: 64%;
+                margin: 34px auto 0;
+                line-height: 28px;
+            }
+        }
+
+    }
+
+    .modall-request {
+        .modall-body {
+            max-width: 290px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .modall-card .modall-body {
+        max-width: 862px;
+
+        .close {
+            top: 14px;
+            right: 9px;
+            left: auto;
+            width: 36px;
+            height: 36px;
+            position: absolute;
+
+            &::before,
+            &::after {
+                left: 0;
+            }
+        }
+
+        img {
+            height: 100%;
+        }
+
+        .content {
+            height: auto;
+        }
+
+        .section-content {
+            padding: 10px 10px 60px;
+            height: auto;
+            margin: 219px 18px 20px;
+        }
+
+        .item-details {
+            margin-bottom: 32px;
+        }
+
+        .action {
+            margin: 0 auto;
+            width: 100%;
+            text-align: right;
+            position: absolute;
+            bottom: 20px;
+            right: 18px;
+        }
+
+    }
+
+    .modall-request .modall-body {
+        width: 1024px;
+        overflow-y: hidden;
+        max-width: none;
+
+        .form {
+            padding: 83px 67px;
+            overflow: auto;
+            padding-right: 50%;
+            background-image: url(../img/bg-popup.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        img {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 357px;
+            height: 439px;
+        }
+
+        h4 {
+            text-align: left;
+        }
+    }
+
+    .dark {
+        .modall-request .modall-body {
+            .form {
+                background-image: url(../img/bg-popup-dark.png);
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .modall-card .modall-body {
+        max-width: 1114px;
+        overflow: auto;
+        height: auto;
+        padding: 17px;
+
+        content {
+            padding: 10px 10px 60px;
+            height: auto;
+            margin: 0;
+            margin-left: 50%;
+            margin-top: 20px;
+            margin-right: 18px;
+        }
+
+        .close {
+            top: 20px;
+            right: 14px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .modall-card .modall-body {
+        max-width: 1440px;
+        overflow: auto;
+        height: auto;
+        padding: 35px 41px 52px;
+
+        .section-content {
+            padding: 20px 27px 57px;
+            height: auto;
+            margin: 0;
+            margin-left: 58%;
+            margin-top: 88px;
+            margin-right: 92px;
+        }
+
+        h2 {
+            margin-bottom: 34px;
+            margin-top: 10px;
+            max-width: 77%;
+            line-height: 35px;
+        }
+
+        span {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-family: "Gotham Pro";
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+        }
+
+        .action {
+            margin: 0 auto;
+            width: 100%;
+            text-align: right;
+            position: absolute;
+            bottom: 20px;
+            right: 91px;
+
+            .btn {
+                min-width: 226px;
+                min-height: 48px;
+            }
+        }
+    }
+
+    .modall-request .modall-body {
+        width: 1168px;
+
+        img {
+            right: 15%;
+            top: 52%;
+            width: 397px;
+            height: 455px;
+        }
+
+        h4 {
+            line-height: 23.79px;
+            margin-bottom: 59px;
+            margin-top: 0;
+            max-width: 300px;
+        }
+
+        .form {
+            padding: 118px 185px;
+
+            input {
+                line-height: 20px;
+            }
+        }
+
+        .form-column {
+            margin-bottom: 33px;
+            max-width: 292px;
+        }
+
+        .btn {
+            min-width: 229px;
+            min-height: 53px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .modall-card .modall-body {
+        max-width: 1920px;
+        padding: 55px 31px 52px;
+
+        .section-content {
+            padding: 29px 34px 76px;
+            height: auto;
+            margin: 0;
+            margin-left: 58%;
+            margin-top: 52px;
+            margin-right: 135px;
+        }
+
+        .close {
+            top: 8px;
+            right: 9px;
+        }
+
+        .action {
+            margin: 0 auto;
+            width: 100%;
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            right: 134px;
+
+            .btn {
+                min-width: 313px;
+                min-height: 63px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 34px;
+            margin-top: 10px;
+            max-width: 73%;
+            line-height: 50px;
+            font-size: 50px;
+        }
+
+        span {
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 35px;
+        }
+
+        p {
+            margin-top: 14px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+    }
+
+    .modall-request .modall-body {
+        width: 1548px;
+        height: 707px;
+
+        .form {
+            padding: 165px 244px 118px;
+
+            input {
+                line-height: 26px;
+            }
+        }
+
+        h4 {
+            line-height: 31.79px;
+            margin-bottom: 90px;
+            margin-top: 0;
+            max-width: 386px;
+            font-size: 31px;
+        }
+
+        .form-column {
+            margin-bottom: 49px;
+            max-width: 395px;
+        }
+
+        .form-action {
+            margin-bottom: 23px;
+            margin-top: 56px;
+        }
+
+        .btn {
+            min-width: 299px;
+            min-height: 65px;
+        }
+
+        img {
+            width: 527px;
+            height: 609px;
+        }
+
+        .close {
+            top: 26px;
+            right: 60px;
+            width: 32px;
+            height: 32px;
+
+            &::before,
+            &::after {
+                width: 30px;
+                height: 2px;
+            }
+        }
+    }
+}

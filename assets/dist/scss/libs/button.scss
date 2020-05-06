@@ -1,0 +1,258 @@
+.btn {
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $color_white;
+  min-width: 290px;
+  min-height: 63px;
+  z-index: 1;
+  position: relative;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  border: 1px solid $color_green;
+  padding: 0 25px;
+  background-color: $color_green;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Gotham Pro";
+
+  i.icon-left-arrow {
+    transform: rotate(180deg);
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 11px;
+    font-size: 25px;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: inherit;
+    color: $color_silver;
+    border: 1px solid $color_silver;
+
+    i {
+      color: $color_silver;
+    }
+  }
+}
+
+.pagingInfo {
+  position: relative;
+  width: 41px;
+  display: inline-flex;
+  justify-content: space-between;
+  text-align: right;
+  margin: auto;
+  height: 28px;
+  vertical-align: top;
+  margin-left: 55%;
+
+  p {
+    color: $color_silver;
+    font-family: "Gotham Pro";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 187px;
+    position: absolute;
+    right: 0;
+    bottom: -37px;
+    letter-spacing: 0.9px;
+  }
+
+  span {
+    color: $color_silver;
+    font-family: "Gotham Pro";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    display: inline-block;
+    margin: 0 2px;
+    &:first-child{
+      color:$color_green;
+    }
+  }
+}
+
+.holder-btn,
+.holder {
+  position: relative;
+  width: auto;
+  z-index: 10;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-around;
+  pointer-events: none;
+  margin-top: 5px;
+  margin-left: 7px;
+  max-width: 150px;
+}
+
+.btn-arrow,
+.slick-arrow {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid $color_silver;
+  background-color: inherit;
+  font-size: 18px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  pointer-events: auto;
+
+  &:hover {
+    background-color: $color_green;
+    border: 1px solid $color_green;
+
+    i {
+      color: $color_white;
+    }
+  }
+
+  &.active {
+    display: block;
+  }
+
+  &.not-active {
+    display: none !important;
+  }
+
+
+  i {
+    font-size: 18px;
+    pointer-events: none;
+    color: $color_silver;
+  }
+
+
+
+
+}
+
+@media screen and (min-width: 480px) {
+  .pagingInfo {
+    margin-left: 64%;
+  }
+
+  .holder-btn,
+  .holder {
+    button {
+      margin: 0 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pagingInfo {
+    margin-left: 79%;
+    width: 100%;
+    text-align: right;
+    margin: auto;
+    height: auto;
+    margin-bottom: 19px;
+    justify-content: flex-end;
+
+    p {
+      width: 187px;
+      position: absolute;
+      right: 0;
+      bottom: -29px;
+      letter-spacing: 0.9px;
+      font-size: 9px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .holder-btn,
+  .holder {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    padding: 0;
+    display: inline-flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    margin-top: 5px;
+    margin-left: 0;
+    max-width: none;
+  }
+
+  .btn-arrow {
+    width: 33px;
+    height: 32px;
+  }
+
+  .slide-nav {
+    position: absolute;
+    bottom: 16.7%;
+    width: 200px;
+    right: 57px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .slide-nav {
+    bottom: 10%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .slide-nav {
+    bottom: 16.7%;
+  }
+}
+
+
+@media screen and (min-width: 1920px) {
+  .slide-nav {
+    bottom: 11.5%;
+    right: 76px;
+  }
+
+  .pagingInfo {
+    span {
+      font-size: 16px;
+    }
+
+    p {
+      bottom: -39px;
+      font-size: 12px;
+    }
+  }
+
+  .holder-btn,
+  .holder {
+    margin-top: 22px;
+
+    .btn-arrow {
+      width: 44px;
+      height: 44px;
+      margin: 0 8px;
+    }
+  }
+}
